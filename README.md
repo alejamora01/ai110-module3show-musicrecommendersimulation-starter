@@ -143,3 +143,23 @@ add more music genres and user feedback to improve
 the recommendations.
 
 For more details, see my [Model Card](model_card.md).
+
+## Optional Extension: Multiple Scoring Modes
+
+I added three scoring modes to my recommender:
+
+- Genre-First: prioritizes matching genres.
+- Mood-First: prioritizes matching moods.
+- Energy-Focused: prioritizes energy similarity.
+
+Each mode uses different weights but follows the same scoring process. This is a simple strategy-based design.
+
+### How to Run
+
+    python -m src.main Genre-First
+    python -m src.main Mood-First
+    python -m src.main Energy-Focused
+
+### What I Learned
+
+I learned that changing the scoring weights can change the recommendations. For the conflicting profile, Energy-Focused ranked Gym Hero above Quiet Piano. This showed me how different strategies can produce different results using the same dataset.
