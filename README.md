@@ -11,23 +11,17 @@ Your goal is to:
 - Evaluate what your system gets right and wrong
 - Reflect on how this mirrors real world AI recommenders
 
-Replace this paragraph with your own summary of what your version does.
+This project is a simple music recommendation system built in Python. It recommends songs based on a user's music preferences, such as genre, mood, and energy. The system calculates a score for each song and ranks them to find the best matches.
 
 ---
 
 ## How The System Works
 
-Explain your design in plain language.
+My recommender uses content-based filtering, which means it recommends songs based on their features instead of other users' listening history. Real platforms like Spotify can use listening history, likes, skips, and similarities between users to make recommendations.
 
-Some prompts to answer:
+For my system, each Song will have a title, artist, genre, mood, and energy level. The UserProfile will store the user's preferred genre, mood, and energy.
 
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
-
-You can include a simple diagram or bullet list if helpful.
+The recommender will compare each song with the user's preferences and calculate a weighted score. I plan to give genre 50%, mood 30%, and energy 20%. For energy, songs closer to the user's preferred value will get a higher score. Finally, the recommender will sort the songs by score and return the best matches.
 
 ---
 
