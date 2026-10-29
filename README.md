@@ -137,14 +137,19 @@ You will go deeper on this in your model card.
 
 ## Reflection
 
-Read and complete `model_card.md`:
+This project helped me understand how recommendation
+systems turn user preferences into ranked suggestions.
+I learned that even simple scoring rules can produce
+results that feel personalized.
 
-[**Model Card**](model_card.md)
+Using AI tools helped me with coding and debugging,
+but I still needed to check the logic and compare
+the results. One thing that surprised me was how
+changing the weights affected the recommendations,
+especially for users with conflicting preferences.
 
-Write 1 to 2 paragraphs here about what you learned:
+If I continued working on this project, I would
+add more music genres and user feedback to improve
+the recommendations.
 
-- about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
-
-
-
+For more details, see my [Model Card](model_card.md).
