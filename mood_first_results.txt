@@ -1,0 +1,99 @@
+Loaded songs: 18
+
+Scoring Mode: Mood-First
+
+==================================================
+Profile: High-Energy Pop
+==================================================
+1. Sunrise City - Neon Echo
+   Score: 4.48
+   Because: genre match (+1.0), mood match (+2.0), energy similarity (+0.98), acoustic match (+0.5)
+
+2. Summer Salsa - Caribe Flow
+   Score: 3.48
+   Because: mood match (+2.0), energy similarity (+0.98), acoustic match (+0.5)
+
+3. Rooftop Lights - Indigo Parade
+   Score: 3.46
+   Because: mood match (+2.0), energy similarity (+0.96), acoustic match (+0.5)
+
+4. Bogota Nights - Luna Beats
+   Score: 3.42
+   Because: mood match (+2.0), energy similarity (+0.92), acoustic match (+0.5)
+
+5. Gym Hero - Max Pulse
+   Score: 2.37
+   Because: genre match (+1.0), energy similarity (+0.87), acoustic match (+0.5)
+
+
+==================================================
+Profile: Chill Lofi
+==================================================
+1. Library Rain - Paper Lanterns
+   Score: 4.45
+   Because: genre match (+1.0), mood match (+2.0), energy similarity (+0.95), acoustic match (+0.5)
+
+2. Midnight Coding - LoRoom
+   Score: 4.38
+   Because: genre match (+1.0), mood match (+2.0), energy similarity (+0.88), acoustic match (+0.5)
+
+3. Spacewalk Thoughts - Orbit Bloom
+   Score: 3.48
+   Because: mood match (+2.0), energy similarity (+0.98), acoustic match (+0.5)
+
+4. Focus Flow - LoRoom
+   Score: 2.40
+   Because: genre match (+1.0), energy similarity (+0.90), acoustic match (+0.5)
+
+5. Coffee Shop Stories - Slow Stereo
+   Score: 1.43
+   Because: energy similarity (+0.93), acoustic match (+0.5)
+
+
+==================================================
+Profile: Intense Rock
+==================================================
+1. Storm Runner - Voltline
+   Score: 4.46
+   Because: genre match (+1.0), mood match (+2.0), energy similarity (+0.96), acoustic match (+0.5)
+
+2. Gym Hero - Max Pulse
+   Score: 3.48
+   Because: mood match (+2.0), energy similarity (+0.98), acoustic match (+0.5)
+
+3. Electric Weekend - DJ Nova
+   Score: 3.48
+   Because: mood match (+2.0), energy similarity (+0.98), acoustic match (+0.5)
+
+4. Bogota Nights - Luna Beats
+   Score: 1.43
+   Because: energy similarity (+0.93), acoustic match (+0.5)
+
+5. Sunrise City - Neon Echo
+   Score: 1.37
+   Because: energy similarity (+0.87), acoustic match (+0.5)
+
+
+==================================================
+Profile: Conflicting Preferences
+==================================================
+1. Gym Hero - Max Pulse
+   Score: 2.98
+   Because: mood match (+2.0), energy similarity (+0.98)
+
+2. Electric Weekend - DJ Nova
+   Score: 2.98
+   Because: mood match (+2.0), energy similarity (+0.98)
+
+3. Storm Runner - Voltline
+   Score: 2.96
+   Because: mood match (+2.0), energy similarity (+0.96)
+
+4. Quiet Piano - Clara Woods
+   Score: 1.73
+   Because: genre match (+1.0), energy similarity (+0.23), acoustic match (+0.5)
+
+5. Country Roads Home - River Lane
+   Score: 1.10
+   Because: energy similarity (+0.60), acoustic match (+0.5)
+

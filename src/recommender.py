@@ -143,3 +143,74 @@ class Recommender:
 
         score, reasons = score_song(prefs, vars(song))
         return f"Score: {score:.2f} - " + ", ".join(reasons)
+
+
+# Optional Challenge 2: Multiple Scoring Modes
+
+SCORING_MODES = {
+    "Genre-First": {
+        "genre": 2.0,
+        "mood": 1.2,
+        "energy": 1.0,
+        "acoustic": 0.5
+    },
+    "Mood-First": {
+        "genre": 1.0,
+        "mood": 2.0,
+        "energy": 1.0,
+        "acoustic": 0.5
+    },
+    "Energy-Focused": {
+        "genre": 1.0,
+        "mood": 1.2,
+        "energy": 2.0,
+        "acoustic": 0.5
+    }
+}
+
+
+def score_with_mode(user_prefs, song, mode="Genre-First"):
+    """Calculates a song score using the selected weights."""
+    if mode not in SCORING_MODES:
+        raise ValueError("Unknown scoring mode: " + mode)
+
+    weights = SCORING_MODES[mode]
+    score = 0.0
+    reasons = []
+
+    genre = user_prefs.get("genre", user_prefs.get("favorite_genre", ""))
+    mood = user_prefs.get("mood", user_prefs.get("favorite_mood", ""))
+    energy = user_prefs.get("energy", user_prefs.get("target_energy", 0.5))
+
+    if song["genre"].lower() == genre.lower():
+        score += weights["genre"]
+        reasons.append(f"genre match (+{weights['genre']:.1f})")
+
+    if song["mood"].lower() == mood.lower():
+        score += weights["mood"]
+        reasons.append(f"mood match (+{weights['mood']:.1f})")
+
+    similarity = max(0.0, 1.0 - abs(song["energy"] - energy))
+    points = similarity * weights["energy"]
+    score += points
+    reasons.append(f"energy similarity (+{points:.2f})")
+
+    if "likes_acoustic" in user_prefs:
+        acoustic = song["acousticness"] >= 0.5
+
+        if acoustic == user_prefs["likes_acoustic"]:
+            score += weights["acoustic"]
+            reasons.append(f"acoustic match (+{weights['acoustic']:.1f})")
+
+    return round(score, 2), reasons
+
+
+def recommend_with_mode(user_prefs, songs, k=5, mode="Genre-First"):
+    """Ranks songs using the selected scoring strategy."""
+    results = []
+
+    for song in songs:
+        score, reasons = score_with_mode(user_prefs, song, mode)
+        results.append((song, score, ", ".join(reasons)))
+
+    return sorted(results, key=lambda item: item[1], reverse=True)[:k]

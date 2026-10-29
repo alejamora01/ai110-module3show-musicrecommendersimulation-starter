@@ -1,6 +1,6 @@
 """Runs the music recommender with different user profiles."""
 
-from .recommender import load_songs, recommend_songs
+from .recommender import load_songs, recommend_with_mode, SCORING_MODES
 
 
 PROFILES = {
@@ -32,23 +32,28 @@ PROFILES = {
 
 
 def main():
-    """Prints the five best recommendations for each profile."""
+    """Runs recommendations using the selected scoring mode."""
+    import sys
+
+    mode = sys.argv[1] if len(sys.argv) > 1 else "Genre-First"
+
+    if mode not in SCORING_MODES:
+        raise ValueError("Choose: " + ", ".join(SCORING_MODES))
+
     songs = load_songs("data/songs.csv")
+    print("\nScoring Mode:", mode)
 
     for name, prefs in PROFILES.items():
         print("\n" + "=" * 50)
         print("Profile:", name)
-        print("Preferences:", prefs)
         print("=" * 50)
 
-        results = recommend_songs(prefs, songs, k=5)
+        results = recommend_with_mode(prefs, songs, k=5, mode=mode)
 
-        for number, (song, score, reasons) in enumerate(
-            results, start=1
-        ):
+        for number, (song, score, reason) in enumerate(results, 1):
             print(f"{number}. {song['title']} - {song['artist']}")
             print(f"   Score: {score:.2f}")
-            print(f"   Because: {reasons}")
+            print(f"   Because: {reason}")
             print()
 
 
