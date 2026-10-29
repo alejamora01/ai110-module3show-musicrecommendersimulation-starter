@@ -108,4 +108,24 @@ Prompts:
 
 - What you learned about recommender systems  
 - Something unexpected or interesting you discovered  
-- How this changed the way you think about music recommendation apps  
+- How this changed the way you think about music recommendation apps
+
+## Algorithmic Approach
+
+My music recommender uses content-based filtering. It
+compares the features of each song with the user's music
+preferences instead of using data from other users.
+
+The system gives 2.0 points for a matching genre, 1.2
+points for a matching mood, and up to 1.0 point based on
+energy similarity. It also gives 0.5 points when the
+song matches the user's acoustic preference.
+
+After scoring every song, the system sorts them from
+highest to lowest and returns the top five results.
+It also explains why each song received its score.
+
+This is a simple rule-based model, not a machine learning
+model trained on real listening data. One limitation is
+that it might recommend too many songs from the same
+genre because genre has the highest weight.

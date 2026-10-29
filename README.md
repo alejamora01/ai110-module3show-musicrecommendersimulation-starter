@@ -77,18 +77,37 @@ You can add more tests in `tests/test_recommender.py`.
 
 ## Sample Recommendation Output
 
-Paste a sample of your recommender's output here as a text block so a reader can see what it produces:
+The following output was generated using my default pop/happy user profile.
 
-```
-# e.g.:
-# User profile: genre=indie, mood=chill, energy=low
-# Recommendations:
-#   1. ...
-#   2. ...
-#   3. ...
-```
+~~~text
+Loaded songs: 18
 
-**Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
+User Profile
+Genre: pop | Mood: happy | Energy: 0.8
+Acoustic preference: No
+
+Top 5 Recommendations
+
+1. Sunrise City - Neon Echo
+   Score: 4.68
+   Because: genre match (+2.0), mood match (+1.2), energy similarity (+0.98), acoustic preference match (+0.5)
+
+2. Gym Hero - Max Pulse
+   Score: 3.37
+   Because: genre match (+2.0), energy similarity (+0.87), acoustic preference match (+0.5)
+
+3. Summer Salsa - Caribe Flow
+   Score: 2.68
+   Because: mood match (+1.2), energy similarity (+0.98), acoustic preference match (+0.5)
+
+4. Rooftop Lights - Indigo Parade
+   Score: 2.66
+   Because: mood match (+1.2), energy similarity (+0.96), acoustic preference match (+0.5)
+
+5. Bogota Nights - Luna Beats
+   Score: 2.62
+   Because: mood match (+1.2), energy similarity (+0.92), acoustic preference match (+0.5)
+~~~
 
 ---
 
