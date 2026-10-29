@@ -113,25 +113,15 @@ Top 5 Recommendations
 
 ## Experiments You Tried
 
-Use this section to document the experiments you ran. For example:
+I tested four profiles: High-Energy Pop, Chill Lofi, Intense Rock, and Conflicting Preferences.
 
-- What happened when you changed the weight on genre from 2.0 to 0.5
-- What happened when you added tempo or valence to the score
-- How did your system behave for different types of users
+I also reduced the genre weight from 2.0 to 1.0 and increased the energy weight from 1.0 to 2.0. The rankings changed for three of the four profiles.
 
----
+The biggest surprise was the conflicting profile. Quiet Piano ranked first with the original weights, but Gym Hero ranked first when energy became more important.
 
 ## Limitations and Risks
 
-Summarize some limitations of your recommender.
-
-Examples:
-
-- It only works on a tiny catalog
-- It does not understand lyrics or language
-- It might over favor one genre or mood
-
-You will go deeper on this in your model card.
+My dataset only has 18 fictional songs, so it cannot represent everyone's music taste. The system also gives genre a high weight, which could make recommendations repetitive. It does not learn from listening history, likes, or skips.
 
 ---
 
