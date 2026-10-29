@@ -1,0 +1,67 @@
+PROFILE: High-Energy Pop
+Original top 5:
+  Sunrise City: 4.68
+  Gym Hero: 3.37
+  Summer Salsa: 2.68
+  Rooftop Lights: 2.66
+  Bogota Nights: 2.62
+Experimental top 5:
+  Sunrise City: 4.66
+  Summer Salsa: 3.66
+  Rooftop Lights: 3.62
+  Bogota Nights: 3.54
+  Gym Hero: 3.24
+Ranking changed: True
+
+PROFILE: Chill Lofi
+Original top 5:
+  Library Rain: 4.65
+  Midnight Coding: 4.58
+  Focus Flow: 3.40
+  Spacewalk Thoughts: 2.68
+  Coffee Shop Stories: 1.43
+Experimental top 5:
+  Library Rain: 4.60
+  Midnight Coding: 4.46
+  Spacewalk Thoughts: 3.66
+  Focus Flow: 3.30
+  Coffee Shop Stories: 2.36
+Ranking changed: True
+
+PROFILE: Intense Rock
+Original top 5:
+  Storm Runner: 4.66
+  Gym Hero: 2.68
+  Electric Weekend: 2.68
+  Bogota Nights: 1.43
+  Sunrise City: 1.37
+Experimental top 5:
+  Storm Runner: 4.62
+  Gym Hero: 3.66
+  Electric Weekend: 3.66
+  Bogota Nights: 2.36
+  Sunrise City: 2.24
+Ranking changed: False
+
+PROFILE: Conflicting Preferences
+Original top 5:
+  Quiet Piano: 2.73
+  Gym Hero: 2.18
+  Electric Weekend: 2.18
+  Storm Runner: 2.16
+  Country Roads Home: 1.10
+Experimental top 5:
+  Gym Hero: 3.16
+  Electric Weekend: 3.16
+  Storm Runner: 3.12
+  Quiet Piano: 1.96
+  Bogota Nights: 1.86
+Ranking changed: True
+
+PAIRWISE COMPARISONS
+High-Energy Pop vs Chill Lofi: Sunrise City (pop, happy) vs Library Rain (lofi, chill)
+High-Energy Pop vs Intense Rock: Sunrise City (pop, happy) vs Storm Runner (rock, intense)
+High-Energy Pop vs Conflicting Preferences: Sunrise City (pop, happy) vs Quiet Piano (classical, relaxed)
+Chill Lofi vs Intense Rock: Library Rain (lofi, chill) vs Storm Runner (rock, intense)
+Chill Lofi vs Conflicting Preferences: Library Rain (lofi, chill) vs Quiet Piano (classical, relaxed)
+Intense Rock vs Conflicting Preferences: Storm Runner (rock, intense) vs Quiet Piano (classical, relaxed)
