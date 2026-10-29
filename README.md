@@ -17,11 +17,26 @@ This project is a simple music recommendation system built in Python. It recomme
 
 ## How The System Works
 
-My recommender uses content-based filtering, which means it recommends songs based on their features instead of other users' listening history. Real platforms like Spotify can use listening history, likes, skips, and similarities between users to make recommendations.
+My recommender uses content-based filtering to suggest songs based on user preferences.
 
-For my system, each Song will have a title, artist, genre, mood, and energy level. The UserProfile will store the user's preferred genre, mood, and energy.
+### Song Features
+Each song has a title, artist, genre, mood, energy, tempo, valence, danceability, and acousticness.
 
-The recommender will compare each song with the user's preferences and calculate a weighted score. I plan to give genre 50%, mood 30%, and energy 20%. For energy, songs closer to the user's preferred value will get a higher score. Finally, the recommender will sort the songs by score and return the best matches.
+### User Profile
+The user prefers pop music, a happy mood, energy of 0.8, and less acoustic music.
+
+### Algorithm Recipe
+- Genre match: 2.0 points
+- Mood match: 1.2 points
+- Energy similarity: 1 - abs(song energy - target energy)
+- Acoustic preference match: 0.5 points
+
+For acousticness, I will use 0.5 as the threshold. The user gets a match when their acoustic preference agrees with whether a song's acousticness is at least 0.5.
+
+The system calculates a score for every song, sorts the results from highest to lowest, and recommends the top K songs.
+
+### Possible Bias
+The algorithm might recommend too many songs from the same genre because genre has the highest weight. This could limit music discovery and create a filter bubble.
 
 ---
 
